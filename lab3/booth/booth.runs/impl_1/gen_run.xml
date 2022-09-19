@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1651640508">
+  <File Type="ROUTE-PWR" Name="booth_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="booth.tcl"/>
+  <File Type="BITSTR-BMM" Name="booth_bd.bmm"/>
+  <File Type="ROUTE-PWR-SUM" Name="booth_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="booth_reports.tcl"/>
+  <File Type="OPT-DCP" Name="booth_opt.dcp"/>
+  <File Type="OPT-DRC" Name="booth_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="booth.hwdef"/>
+  <File Type="PWROPT-DCP" Name="booth_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="booth_placed.dcp"/>
+  <File Type="PLACE-IO" Name="booth_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="booth_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="booth_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="booth_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="booth_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="booth.bgn"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="booth_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="booth.bin"/>
+  <File Type="PHYSOPT-DCP" Name="booth_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="booth.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="booth_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="booth_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="booth_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="booth_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="booth_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="booth_drc_routed.rpx"/>
+  <File Type="BITSTR-LTX" Name="booth.ltx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="booth_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="booth.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="booth_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="booth_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="booth.sysdef"/>
+  <File Type="ROUTE-PWR-RPX" Name="booth_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="booth_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="booth_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="booth_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="booth_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="booth_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-CLK" Name="booth_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="booth_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="booth_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="booth_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="booth_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="booth_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="booth.bit"/>
+  <File Type="BITSTR-RBT" Name="booth.rbt"/>
+  <File Type="BITSTR-NKY" Name="booth.nky"/>
+  <File Type="BG-DRC" Name="booth.drc"/>
+  <File Type="RDI-RDI" Name="booth.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/booth.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="booth"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

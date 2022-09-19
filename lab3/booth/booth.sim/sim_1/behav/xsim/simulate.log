@@ -1,0 +1,7 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+test 8 finished
+====================================
+Test end!
+----PASS!!!
+$finish called at time : 2105 ns : File "D:/200210231/comp_organ/lab3/booth/testbench.v" Line 170
